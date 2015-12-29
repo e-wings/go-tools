@@ -6,5 +6,5 @@ import (
 
 func main() {
 	fmt.Println("Hello github")
-	fmt.Println("from branch 1")
+	fmt.Println("from master")
 }
