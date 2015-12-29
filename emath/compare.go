@@ -8,4 +8,5 @@ func main() {
 	fmt.Println("Hello github")
 	fmt.Println("from master")
 	fmt.Println("from branch3")
+	fmt.Println("from master again")
 }
