@@ -39,4 +39,30 @@ func Test_InRange(t *testing.T) {
 	if res != false || err != nil {
 		t.Error("Test_InRange: 测试字符串未通过")
 	}
+
+	// RangeInRange测试
+	res, err = RangeInRange([]string{"footbal", "basketball"}, []string{"footbal", "basketball", "tennis"})
+	if res != true || err != nil {
+		t.Error("Test_RangeInRange: 字符串子集测试未通过")
+	}
+	res, err = RangeInRange([]string{"footbal", "basketball", "wrong"}, []string{"footbal", "basketball", "tennis"})
+	if res != false || err == nil {
+		t.Error("Test_RangeInRange: 字符串超集测试未通过")
+	}
+	res, err = RangeInRange([]int{1, 2}, []int{1, 2, 3})
+	if res != true || err != nil {
+		t.Error("Test_RangeInRange: 整型子集测试未通过")
+	}
+	res, err = RangeInRange([]int{1, 2, 4}, []int{1, 2, 3})
+	if res != false || err == nil {
+		t.Error("Test_RangeInRange: 整型超集测试未通过")
+	}
+	res, err = RangeInRange([]float64{1.1, 2.2}, []float64{1.1, 2.2, 3.3})
+	if res != true || err != nil {
+		t.Error("Test_RangeInRange: Float子集测试未通过")
+	}
+	res, err = RangeInRange([]float64{1.1, 2.2, 4.4}, []float64{1.1, 2.2, 3.3})
+	if res != false || err == nil {
+		t.Error("Test_RangeInRange: Float超集测试未通过")
+	}
 }
