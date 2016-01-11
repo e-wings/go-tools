@@ -1,6 +1,6 @@
 /* Package form 包含表单验证等辅助函数
  */
-package form
+package eform
 
 import (
 	"errors"
