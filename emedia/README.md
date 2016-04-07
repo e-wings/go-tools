@@ -13,6 +13,7 @@
 	"strconv"
 	"testing"
 
+
 tbl_key.sql  tbl_media.sql  tbl_media_type.sql 是对应的mysql数据结构
 
 下载之后在emedia目录中运行go test命令 对应的是运行测试文件emedia_test.go
