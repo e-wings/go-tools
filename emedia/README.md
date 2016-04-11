@@ -35,9 +35,12 @@ go get github.com/e-wings/go-tools/emedia
 
 ###	beego中使用mysql数据库：
 1.在对应的mysql数据库中创建对应的三张表
+
 2.在model中引入该emedia包
+
 3.在model中init方法中添加	
 orm.RegisterModel(new(emedia.Key), new(emedia.MediaType), new(emedia.Media),...)
+
 4.直接调用包中的增删改方法
 
 ###	测试
