@@ -18,13 +18,13 @@ go get github.com/e-wings/go-tools/emedia
 	"testing"
 ```
 
-### 文件结构
-* tbl_key.sql
-* tbl_media.sql
-* tbl_media_type.sql 是对应的mysql数据结构
-* key.go
-* media.go
-* mediaType.go 是对应的数据库操作文件
+### 文件结构	
+* tbl_key.sql		是对应的mysql数据结构--关键词表
+* tbl_media.sql		是对应的mysql数据结构--图片表
+* tbl_media_type.sql 	是对应的mysql数据结构--图片类型表
+* key.go	是对应的数据库操作文件--关键词增删改
+* media.go	是对应的数据库操作文件--图片增删改
+* mediaType.go	是对应的数据库操作文件--图片类型增删改
 * emedia_test.go 测试文件
 
 ###	使用
@@ -39,7 +39,7 @@ go get github.com/e-wings/go-tools/emedia
 2.在model中引入该emedia包
 
 3.在model中init方法中添加	
-orm.RegisterModel(new(emedia.Key), new(emedia.MediaType), new(emedia.Media),...)
+orm.RegisterModel(new(emedia.Key), new(emedia.MediaType), new(emedia.Media),...)注：如有更多表则在后面添加
 
 4.直接调用包中的增删改方法
 
